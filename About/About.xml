@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>No Vanilla Implant EMP Penalties</name>
+  <author>notstrober</author>
+  <packageId>notstrober.noimplantemp</packageId>
+
+  <supportedVersions>
+    <li>1.6</li>
+    <li>1.7</li>
+  </supportedVersions>
+
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+  </loadAfter>
+
+  <description>
+    Removes EMP-induced vomiting and brain shock from vanilla Royalty and Odyssey implants.
+    
+    Royalty와 Odyssey에서 추가되는 임플란트들을 장착했을 때 EMP를 맞으면 토하고 뇌충격으로 기절하는 상호작용 제거
+  </description>
+</ModMetaData>

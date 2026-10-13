@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Royalty: stomach implants -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>
+      /Defs/HediffDef[
+        defName="ReprocessorStomach" or
+        defName="DetoxifierStomach" or
+        defName="NuclearStomach"
+      ]/comps/li[
+        @Class="HediffCompProperties_ReactOnDamage" and
+        damageDefIncoming="EMP" and
+        vomit="true"
+      ]
+    </xpath>
+
+    <match Class="PatchOperationRemove">
+      <xpath>
+        /Defs/HediffDef[
+          defName="ReprocessorStomach" or
+          defName="DetoxifierStomach" or
+          defName="NuclearStomach"
+        ]/comps/li[
+          @Class="HediffCompProperties_ReactOnDamage" and
+          damageDefIncoming="EMP" and
+          vomit="true"
+        ]
+      </xpath>
+    </match>
+  </Operation>
+
+  <!-- Royalty and Odyssey: brain implants -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>
+      /Defs/HediffDef[
+        defName="Neurocalculator" or
+        defName="LearningAssistant" or
+        defName="CircadianAssistant" or
+        defName="CircadianHalfCycler" or
+        defName="PilotAssistant"
+      ]/comps/li[
+        @Class="HediffCompProperties_ReactOnDamage" and
+        damageDefIncoming="EMP" and
+        createHediff="BrainShock"
+      ]
+    </xpath>
+
+    <match Class="PatchOperationRemove">
+      <xpath>
+        /Defs/HediffDef[
+          defName="Neurocalculator" or
+          defName="LearningAssistant" or
+          defName="CircadianAssistant" or
+          defName="CircadianHalfCycler" or
+          defName="PilotAssistant"
+        ]/comps/li[
+          @Class="HediffCompProperties_ReactOnDamage" and
+          damageDefIncoming="EMP" and
+          createHediff="BrainShock"
+        ]
+      </xpath>
+    </match>
+  </Operation>
+
+</Patch>
